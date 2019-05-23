@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample Title</title>
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+    <!-- using cdn for faster browsing -->
+</head>
+
+<body>
+
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                <!-- fixed contents positioned above or below ion content -->
+                <ion-title> Toolbar Title Sample </ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <!-- control content area for scrolling -->
+            <ion-grid>
+                <!-- responsive layout -->
+                <ion-row>
+                    <ion-col size-md=" 6 " offset-md=" 3 ">
+                        <!-- adjust column size (md screen exclusive) with 3 on left and 3 on right -->
+                        <ion-card>
+                            <!-- ui element for detailed info-->
+                            <ion-card-header>
+                                <ion-card-title> New Card Title </ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label position="floating">Floating Item Input</ion-label>
+                                    <!-- floating element -->
+                                    <ion-input type=" text " id="input-1"></ion-input> <!-- input item -->
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Floating Item Input Number 2</ion-label>
+                                    <!-- floating element -->
+                                    <ion-input type=" number " id="input-2"></ion-input> <!-- input item -->
+                                </ion-item>
+                                <div margin-vertical text-right>
+                                    <!-- add margin -->
+                                    <ion-button id="btn-confirm">
+                                        <ion-icon slot="start" name="add"></ion-icon>Added Button
+                                    </ion-button>
+                                    <ion-button color="danger" fill="outline" id="btn-cancel">
+                                        <ion-icon slot="start" name="close"></ion-icon>Clear Button
+                                    </ion-button>
+                                    <!-- ion button with slotted icon -->
+                                </div>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md=" 6 " offset-md=" 3 ">
+                        <ion-list id="theList"></ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md=" 6 " offset-md=" 3 ">
+                        <p margin>Total: <span id="total-colored"></span></p>           <!-- margin to align the content to the earlier element-->
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-alert-controller></ion-alert-controller>                               <!-- alert element -->
+        </ion-content>
+    </ion-app> <!-- general styling for mobile application -->
+    <script type="application/javascript" src="app.js"></script>
+    <!-- implementing Js script. 
+        The type of js must be declared and putted at the end of body-->
+</body>
+
+</html>
